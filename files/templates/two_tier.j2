@@ -1,0 +1,36 @@
+!!!!!!!!!!!!!!!!!!!!
+!!!#{{ tier_two_asa }}#!!!
+!!!!!!!!!!!!!!!!!!!!
+{% for host in host_list %}object network {{ client_code }}_{{ host[5:] }} {{ host }}{% endfor %}
+!
+!
+exit
+!
+object-group network {{ object_group_tier2 }}
+{% for host in host_list %} network-object object {{ client_code }}_{{ host[5:] }}{% endfor %}
+
+!
+!
+exit
+!
+end
+!
+!
+!!!!!!!!!!!!!!!!!!
+!!!#S1PDINFWC3#!!!
+!!!!!!!!!!!!!!!!!!
+{% for host in host_list %}object network {{ client_code }}_{{ host[5:] }} {{ host }}{% endfor %}
+!
+!
+exit
+!
+object-group network {{ object_group_tier1 }}
+{% for host in host_list %} network-object object {{ client_code }}_{{ host[5:] }}{% endfor %}
+
+!
+!
+exit
+!
+end
+!
+!

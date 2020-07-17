@@ -1,0 +1,15 @@
+###################### {{ ticket_number }} ######################
+
+!##################!
+!###S1PDDZFWC1N1###!
+!##################!
+
+{% for ip_addr in ip_addresses %} object network {{ client_code }}_{{ ip_addr }} host {{ ip_addr }}{% endfor %}
+!
+exit
+!
+object-group network {{ object_group }}
+{% for ip_addr in ip_addresses %} network-object object {{ client_code }}_{{ ip_addr }}{% endfor %}
+!
+end
+!

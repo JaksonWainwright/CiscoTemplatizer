@@ -1,0 +1,66 @@
+!!!!!!!!!!!!!!!!!!!!
+!!!#S1PDDZFWC1N1#!!!
+!!!!!!!!!!!!!!!!!!!!
+object network ASDF_1.1.1.1
+ host 1.1.1.1
+object network ASDF_2.2.2.2
+ host 2.2.2.2
+object network ASDF_3.3.3.3
+ host 3.3.3.3
+object network ASDF_tools-broxel.pd.gp
+ fqdn tools-broxel.pd.gp
+object network ASDF_tool-ballsack.pd.gp
+ fqdn tool-ballsack.pd.gp
+
+!
+!
+exit
+!
+object-group network GO-EXT-PDAPI
+ network-object object ASDF_1.1.1.1
+ network-object object ASDF_2.2.2.2
+ network-object object ASDF_3.3.3.3
+ network-object object ASDF_tools-broxel.pd.gp
+ network-object object ASDF_tool-ballsack.pd.gp
+
+
+!
+!
+exit
+!
+end
+!
+!
+!!!!!!!!!!!!!!!!!!
+!!!#S1PDINFWC3#!!!
+!!!!!!!!!!!!!!!!!!
+object network ASDF_1.1.1.1
+ host 1.1.1.1
+object network ASDF_2.2.2.2
+ host 2.2.2.2
+object network ASDF_3.3.3.3
+ host 3.3.3.3
+object network ASDF_tools-broxel.pd.gp
+ fqdn tools-broxel.pd.gp
+object network ASDF_tool-ballsack.pd.gp
+ fqdn tool-ballsack.pd.gp
+
+!
+!
+exit
+!
+object-group network GO-EXT-PDAPI
+ network-object object ASDF_1.1.1.1
+ network-object object ASDF_2.2.2.2
+ network-object object ASDF_3.3.3.3
+ network-object object ASDF_tools-broxel.pd.gp
+ network-object object ASDF_tool-ballsack.pd.gp
+
+
+!
+!
+exit
+!
+end
+!
+!
